@@ -30,8 +30,37 @@ function somme(a,b){
 		else return NAN;
 }
 */
+/*
+function user (nom,prenom){
+	this.nom=nom;
+	this.prenom=prenom;
+	this.direHi = function(){
+		console.log("Hi");
+	}
+}
 
-function f=(a,b){
-	console.log(a+b);
+let a= new user ('lakhl','rachid');
+let b= new user ('sou','yassir');
+*/
+
+function vect (x,y){
+	this.x=x;
+	this.y=y;	
 };
-f=(2,1);
+
+vect.prototype.module=function(){
+	return Math.sqrt(this.x**2 +this.y**2);
+}
+
+vect.prototype.egale=function(v){
+
+	
+	return (this.x==v.x && this.y==v.y);
+
+}
+
+let v1=new vect(2,4);
+let v2=new vect(3,4);
+console.log(v1.module());
+console.log(v2.module());
+console.log(v1.egale(v2));
