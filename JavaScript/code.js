@@ -42,7 +42,7 @@ function user (nom,prenom){
 let a= new user ('lakhl','rachid');
 let b= new user ('sou','yassir');
 */
-
+/*
 function vect (x,y){
 	this.x=x;
 	this.y=y;	
@@ -57,6 +57,26 @@ vect.prototype.egale=function(v){
 	
 	return (this.x==v.x && this.y==v.y);
 
+}
+
+let v1=new vect(2,4);
+let v2=new vect(3,4);
+console.log(v1.module());
+console.log(v2.module());
+console.log(v1.egale(v2));
+*/
+class vect{
+	constructor (x,y){
+		this.x=x;
+		this.y=y;	
+	}
+	module(){
+		return Math.sqrt(this.x**2 +this.y**2);
+	}
+
+	egale(v){
+		return (this.x==v.x && this.y==v.y);
+	}
 }
 
 let v1=new vect(2,4);
